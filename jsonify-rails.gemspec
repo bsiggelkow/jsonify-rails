@@ -4,7 +4,7 @@ require "jsonify/rails/version"
 
 Gem::Specification.new do |s|
   s.name        = "jsonify-rails"
-  s.version     = Jsonify::VERSION
+  s.version     = Jsonify::Rails::VERSION
   s.authors     = ["Bill Siggelkow"]
   s.email       = ["bsiggelkow@me.com"]
   s.homepage    = "http://github.com/bsiggelkow/jsonify-rails"

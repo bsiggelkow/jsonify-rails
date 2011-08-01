@@ -1,5 +1,6 @@
 module Jsonify
-  module Template
+  module Rails
     VERSION = "0.0.5"
+  end
 end
   
