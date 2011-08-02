@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "jsonify/rails/version"
+require "jsonify-rails/version"
 
 Gem::Specification.new do |s|
   s.name        = "jsonify-rails"
-  s.version     = Jsonify::Rails::VERSION
+  s.version     = JsonifyRails::VERSION
   s.authors     = ["Bill Siggelkow"]
   s.email       = ["bsiggelkow@me.com"]
   s.homepage    = "http://github.com/bsiggelkow/jsonify-rails"
