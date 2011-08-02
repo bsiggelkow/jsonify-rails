@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jsonify-rails (0.0.5)
+    jsonify-rails (0.0.6)
       actionpack (~> 3.0.0)
       jsonify
 
