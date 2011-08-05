@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    jsonify-rails (0.0.6)
-      actionpack (~> 3.0.0)
+    jsonify-rails (0.0.7)
+      actionpack (>= 3.0.0)
       jsonify
 
 GEM
