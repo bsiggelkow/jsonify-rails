@@ -1,4 +1,4 @@
-# Jsonify-Rails &mdash; Use Jsonify templates for Rails view
+# Jsonify-Rails &mdash; Jsonify templates for Rails views
 
 [Jsonify](https://github.com/bsiggelkow/jsonify) is to JSON as [Builder](https://github.com/jimweirich/builder) is to XML.
 
@@ -91,3 +91,7 @@ This project is released under the MIT license.
 ## Authors
 
 * [Bill Siggelkow](https://github.com/bsiggelkow)
+
+## Contributors
+
+* [Trym Skaar](https://github.com/trym)
