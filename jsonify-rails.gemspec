@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency 'jsonify'
-  s.add_dependency "actionpack", "~> 3.0.0"
+  s.add_dependency "actionpack", ">= 3.0.0"
 
   s.add_development_dependency 'bundler'
   s.add_development_dependency 'rake'

@@ -1,15 +1,29 @@
 require 'action_view'
 module ActionView
   module Template::Handlers
-    class JsonifyBuilder < Template::Handler
-      include Compilable
+    if ::Rails::VERSION::MAJOR == 3 && ::Rails::VERSION::MINOR < 1
+      class JsonifyBuilder < Template::Handler
+        include Compilable
 
-      self.default_format = Mime::JSON
+        self.default_format = Mime::JSON
 
-      def compile(template)
-        "json = ::Jsonify::Builder.new();" +
-          template.source +
-        ";json.compile!;"
+        def compile(template)
+          "json = ::Jsonify::Builder.new();" +
+            template.source +
+          ";json.compile!;"
+        end
+      end
+    else
+      class JsonifyBuilder
+        def default_format
+          Mime::JSON
+        end
+
+        def self.call(template)
+          "json = ::Jsonify::Builder.new();" +
+            template.source +
+          ";json.compile!;"
+        end
       end
     end
   end
