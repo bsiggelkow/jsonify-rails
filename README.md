@@ -20,6 +20,10 @@ The Jsonify template handler exposes a `Jsonify::Builder` instance to your templ
 Just like with any other template, your Jsonify template will have access to
 any instance variables that are exposed through the controller.
 
+For optimum performance, Jsonify outputs the generated JSON string in plain format -- no newlines, or spaces -- this is best for production. However, if you want "pretty" output, you can configure Jsonify by adding the following configuration line to `application.rb`.
+
+    config.jsonify_format = :pretty
+
 #### Partials
 
 You can use partials from Jsonify views, and you can create Jsonify partials.  How your Jsonify template uses a partial depends on how the information the partial returns is structured. Keep in mind that any paritial, be it a Jsonify template, erb, or anything else, always a returns its result as a string.
