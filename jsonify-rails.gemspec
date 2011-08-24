@@ -24,4 +24,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'autotest'
+  s.add_development_dependency 'rails', '>= 3.1.0.rc6'
+  
 end
