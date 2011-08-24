@@ -23,7 +23,7 @@ module ActionView
           Mime::JSON
         end
         
-        def format
+        def self.format
           Rails.application.config.respond_to?(:jsonify_format) ? Rails.application.config.jsonify_format : 'plain'
         end
 
