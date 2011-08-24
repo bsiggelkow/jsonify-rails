@@ -7,15 +7,18 @@ module ActionView
 
         self.default_format = Mime::JSON
 
-        def format
-          Rails.application.config.respond_to?(:jsonify_format) ? Rails.application.config.jsonify_format : 'plain'
-        end
-
         def compile(template)
-          "json = ::Jsonify::Builder.new(:format => :#{format});" +
+          "json = ::Jsonify::Builder.new(:format => :#{jsonify_format});" +
             template.source +
           ";json.compile!;"
         end
+        
+        private 
+
+        def jsonify_format
+          Rails.application.config.respond_to?(:jsonify_format) ? Rails.application.config.jsonify_format : 'plain'
+        end
+
       end
     else
       class JsonifyBuilder
@@ -23,15 +26,18 @@ module ActionView
           Mime::JSON
         end
         
-        def self.format
-          Rails.application.config.respond_to?(:jsonify_format) ? Rails.application.config.jsonify_format : 'plain'
-        end
-
         def self.call(template)
-          "json = ::Jsonify::Builder.new(:format => :#{format});" +
+          "json = ::Jsonify::Builder.new(:format => :#{jsonify_format});" +
             template.source +
           ";json.compile!;"
         end
+        
+        private 
+
+        def self.jsonify_format
+          Rails.application.config.respond_to?(:jsonify_format) ? Rails.application.config.jsonify_format : 'plain'
+        end
+        
       end
     end
   end
