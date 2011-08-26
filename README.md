@@ -1,4 +1,4 @@
-# Jsonify-Rails &mdash; Jsonify templates for Rails views [![Build Status](http://travis-ci.org/bsiggelkow/jsonify-rails.png)](http://travis-ci.org/bsiggelkow/jsonify-rails)
+# Jsonify-Rails &mdash; Jsonify templates for Rails views [![Build Status](https://travis-ci.org/bsiggelkow/jsonify-rails.png)](http://travis-ci.org/bsiggelkow/jsonify-rails)
 
 [Jsonify](https://github.com/bsiggelkow/jsonify) is to JSON as [Builder](https://github.com/jimweirich/builder) is to XML.
 
