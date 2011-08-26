@@ -18,13 +18,13 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency 'jsonify'
-  s.add_dependency "actionpack", ">= 3.0.0"
+  s.add_dependency "actionpack"
 
   s.add_development_dependency 'bundler'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'autotest'
   s.add_development_dependency 'json' unless RUBY_VERSION =~ /^1.9/
-  s.add_development_dependency 'rails', '>= 3.1.0.rc6'
+  s.add_development_dependency 'rails', ENV["RAILS_VERSION"] || ">= 3.1.0.rc6"
   
 end
