@@ -8,7 +8,7 @@
 
 ## Usage
 
-Jsonify-rails provides a Rails 3 template handler allowing you to create 
+Jsonify-Rails provides a Rails 3 template handler allowing you to create 
 view templates using Jsonify. Any template with a `.jsonify` will be handled by Rails.
 
 The Jsonify template handler exposes a `Jsonify::Builder` instance to your template with the `json` variable:
