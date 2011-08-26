@@ -27,10 +27,7 @@ describe 'Jsonify template handler' do
 
     describe 'when configured with ' do
       def expect_format(format)
-        Jsonify::Builder
-          .should_receive(:new)
-          .with({:format => format})
-          .and_return( double("json").as_null_object )
+        Jsonify::Builder.should_receive(:new).with({:format => format}).and_return( double("json").as_null_object )
       end
       
       describe 'pretty' do
