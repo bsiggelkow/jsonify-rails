@@ -23,8 +23,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'bundler'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
-  s.add_development_dependency 'autotest'
   s.add_development_dependency 'json' unless RUBY_VERSION =~ /^1.9/
-  s.add_development_dependency 'rails', ENV["RAILS_VERSION"] || ">= 3.1.0.rc6"
+  s.add_development_dependency 'rails', ENV["RAILS_VERSION"] || ">= 3.1.0"
   
 end
