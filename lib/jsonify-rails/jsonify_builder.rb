@@ -10,7 +10,7 @@ module ActionView
         def compile(template)
           "json = ::Jsonify::Builder.new(:format => :#{jsonify_format});" +
             template.source +
-          ";json.compile!;"
+          ";\njson.compile!;"
         end
         
         private 
@@ -29,7 +29,7 @@ module ActionView
         def self.call(template)
           "json = ::Jsonify::Builder.new(:format => :#{jsonify_format});" +
             template.source +
-          ";json.compile!;"
+          ";\njson.compile!;"
         end
         
         private 

@@ -11,6 +11,10 @@ describe 'Jsonify template handler' do
     ViewTemplate.new("json.hello 'world'")
   end
 
+  let( :template_with_trailing_comment ) do
+    ViewTemplate.new("json.hello 'world' #trailing comment")
+  end
+
   context "#{Rails.version}" do
     before do
       Rails.stub_chain(:application, :config, :jsonify_format).and_return( :plain )
@@ -22,6 +26,11 @@ describe 'Jsonify template handler' do
 
     it 'should compile to JSON' do
       result = eval( Handler.call template )
+      result.should == '{"hello":"world"}'
+    end
+
+    it 'should ignore trailing comments' do
+      result = eval( Handler.call template_with_trailing_comment )
       result.should == '{"hello":"world"}'
     end
 
