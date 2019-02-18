@@ -5,7 +5,7 @@ module ActionView
       class JsonifyBuilder < Template::Handler
         include Compilable
 
-        self.default_format = Mime::JSON
+        self.default_format = Mime[:json]
 
         def compile(template)
           "json = ::Jsonify::Builder.new(:format => :#{jsonify_format});" +
@@ -23,7 +23,7 @@ module ActionView
     else
       class JsonifyBuilder
         def default_format
-          Mime::JSON
+          Mime[:json]
         end
         
         def self.call(template)
