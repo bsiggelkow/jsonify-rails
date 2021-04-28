@@ -26,9 +26,10 @@ module ActionView
           Mime::JSON
         end
         
-        def self.call(template)
+        def self.call(template, source = nil)
+          source ||= template.source
           "json = ::Jsonify::Builder.new(:format => :#{jsonify_format});" +
-            template.source +
+            source +
           ";\njson.compile!;"
         end
         
